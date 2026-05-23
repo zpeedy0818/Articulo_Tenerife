@@ -75,6 +75,14 @@ export function CronicaUno() {
         >
           <ChevronDown className="text-white w-8 h-8 opacity-70" />
         </motion.div>
+
+        {/* Citation */}
+        <motion.div 
+          style={{ opacity: heroOpacity }}
+          className="absolute bottom-4 right-4 z-30 text-[10px] text-white/30 font-sans tracking-wide select-none"
+        >
+          Foto: Tascón Caicedo, V. (2026). Paisaje camino a Tenerife [Fotografía]. Archivo personal.
+        </motion.div>
       </section>
 
       {/* Primer Bloque: Texto e Imagen */}
@@ -127,6 +135,11 @@ export function CronicaUno() {
                   {img.caption}
                 </p>
               </div>
+              {img.id === 1 && (
+                <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-20 text-[10px] text-white/30 font-sans tracking-wide select-none">
+                  Foto: Tascón Caicedo, V. (2026). Paisaje en Tenerife [Fotografía]. Archivo personal.
+                </div>
+              )}
             </div>
           ))}
         </div>

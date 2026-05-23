@@ -168,6 +168,19 @@ export function ArticuloInvestigativo() {
             <span className="font-sans text-xs uppercase tracking-[0.2em]">Volver al inicio</span>
           </Link>
         </motion.div>
+
+        {/* Citation */}
+        <div className="absolute bottom-4 right-4 z-30 text-[10px] text-white/30 font-sans tracking-wide select-none">
+          Foto: Conoce Colombia. (s.f.). Tenerife: corredor turístico de montaña.{" "}
+          <a 
+            href="https://conocecolombia.com/tenerife-corredor-turistico-montana/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="underline hover:text-white/60 transition-colors"
+          >
+            Fuente
+          </a>
+        </div>
       </div>
 
     </section>

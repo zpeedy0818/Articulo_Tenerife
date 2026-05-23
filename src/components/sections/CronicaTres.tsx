@@ -1,32 +1,86 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowLeft, ArrowRight, Pause, Play, X, ChevronDown, Map } from "lucide-react";
+import { ArrowLeft, ArrowRight, Pause, Play, X, ChevronDown, Map, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 import clsx from "clsx";
 
 const masonryImages = [
-  "https://images.unsplash.com/photo-1542224566-6e85f2e772f?q=80&w=800&auto=format&fit=crop",
+  "/images/cronica-3/masonry-1.jpg",
   "/images/cronica-3/masonry-2.jpg",
   "/images/cronica-3/masonry-3.jpg",
   "/images/cronica-3/masonry-4.jpg",
   "/images/cronica-3/masonry-5.jpg",
   "/images/cronica-3/masonry-6.jpg",
+  "/images/cronica-3/masonry-7.jpg",
 ];
 
 export function CronicaTres() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+  }, []);
   
   // Fake Audio Player Animation State
-  const waveHeights = Array.from({ length: 40 }).map(() => Math.random() * 100);
+  const [waveData] = useState(() => 
+    Array.from({ length: 40 }).map(() => ({
+      height: Math.random() * 100,
+      randomTarget: Math.random() * 100,
+      duration: 0.5 + Math.random(),
+    }))
+  );
 
   const { scrollY } = useScroll();
   const heroOpacity = useTransform(scrollY, [0, 500], [1, 0]);
   const heroScale = useTransform(scrollY, [0, 500], [1, 0.95]);
   const heroY = useTransform(scrollY, [0, 500], [0, -80]);
+
+  const handlePrev = useCallback((e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    if (lightboxIndex !== null) {
+      setLightboxIndex((prev) => (prev === 0 ? masonryImages.length - 1 : prev! - 1));
+    }
+  }, [lightboxIndex]);
+
+  const handleNext = useCallback((e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    if (lightboxIndex !== null) {
+      setLightboxIndex((prev) => (prev === masonryImages.length - 1 ? 0 : prev! + 1));
+    }
+  }, [lightboxIndex]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (lightboxIndex === null) return;
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "ArrowRight") handleNext();
+      if (e.key === "Escape") setLightboxIndex(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxIndex, handlePrev, handleNext]);
+
+  // Lock scroll when lightbox is open
+  useEffect(() => {
+    if (lightboxIndex !== null) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
+  }, [lightboxIndex]);
 
   return (
     <div id="cronica-3" className="relative w-full bg-[var(--color-paramo-dark)] text-[var(--color-paramo-bone)] overflow-hidden">
@@ -112,7 +166,7 @@ export function CronicaTres() {
             </h2>
             <div className="font-sans space-y-6 text-lg text-[var(--color-paramo-bone)]/90 leading-relaxed">
               <p>
-                Alejandro ha dedicado su vida a proteger los nacimientos de agua y los frailejones. Su organización, "Cuidemos el Páramo", nació como una respuesta pacífica a años de abandono estatal y conflicto.
+                Alejandro ha dedicado su vida a proteger los nacimientos de agua y los frailejones. Su organización, &quot;Cuidemos el Páramo&quot;, nació como una respuesta pacífica a años de abandono estatal y conflicto.
               </p>
               <p>
                 Su filosofía es simple: si la comunidad conoce su territorio, lo defenderá. A través de la educación ambiental, ha transformado a jóvenes en guardianes del páramo.
@@ -147,11 +201,11 @@ export function CronicaTres() {
                 </button>
                 
                 <div className="flex-1 flex items-center gap-1 h-12 overflow-hidden">
-                  {waveHeights.map((h, i) => (
+                  {waveData.map((item, i) => (
                     <motion.div 
                       key={i}
-                      animate={{ height: isPlaying ? [h + '%', Math.random() * 100 + '%', h + '%'] : h * 0.3 + '%' }}
-                      transition={{ duration: 0.5 + Math.random(), repeat: Infinity }}
+                      animate={{ height: isPlaying ? [item.height + '%', item.randomTarget + '%', item.height + '%'] : item.height * 0.3 + '%' }}
+                      transition={{ duration: item.duration, repeat: Infinity }}
                       className={clsx(
                         "w-1.5 rounded-full transition-colors",
                         isPlaying ? "bg-[var(--color-paramo-yellow)]" : "bg-[var(--color-paramo-moss)]/30"
@@ -179,7 +233,7 @@ export function CronicaTres() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: (i % 3) * 0.2 }}
                 className="break-inside-avoid overflow-hidden rounded-sm cursor-pointer group"
-                onClick={() => setLightboxImg(src)}
+                onClick={() => setLightboxIndex(i)}
               >
                 <img 
                   src={src} 
@@ -192,17 +246,60 @@ export function CronicaTres() {
         </div>
       </section>
 
-      {/* Lightbox */}
-      {lightboxImg && (
-        <div className="fixed inset-0 z-50 bg-[var(--color-paramo-dark)]/95 backdrop-blur-xl flex items-center justify-center p-4">
+      {/* Lightbox rendered in portal */}
+      {mounted && lightboxIndex !== null && createPortal(
+        <div 
+          className="fixed inset-0 z-[9999] bg-[var(--color-paramo-dark)]/95 backdrop-blur-xl flex items-center justify-center p-4 select-none"
+          onClick={() => setLightboxIndex(null)}
+        >
+          {/* Close button */}
           <button 
-            onClick={() => setLightboxImg(null)}
-            className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors"
+            onClick={() => setLightboxIndex(null)}
+            className="absolute top-6 right-6 text-white/80 hover:text-white bg-black/40 hover:bg-black/60 backdrop-blur-md transition-all duration-200 z-50 p-2.5 rounded-full shadow-lg"
+            aria-label="Cerrar vista previa"
           >
-            <X size={32} />
+            <X size={28} />
           </button>
-          <img src={lightboxImg} alt="Enlarged" className="max-w-full max-h-[90vh] object-contain rounded-sm shadow-2xl" />
-        </div>
+
+          {/* Navigation - Prev Button */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/80 hover:text-white bg-black/40 hover:bg-black/60 backdrop-blur-md p-3.5 rounded-full transition-all duration-200 z-50 shadow-lg hover:scale-105"
+            aria-label="Imagen anterior"
+          >
+            <ChevronLeft size={28} />
+          </button>
+
+          {/* Image Container with motion to animate on index change */}
+          <div 
+            className="relative max-w-full max-h-[85vh] flex flex-col items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <motion.img 
+              key={lightboxIndex}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.25 }}
+              src={masonryImages[lightboxIndex]} 
+              alt={`Actividad ambiental ${lightboxIndex + 1}`} 
+              className="max-w-[90vw] max-h-[80vh] md:max-h-[85vh] object-contain rounded-sm shadow-2xl" 
+            />
+            {/* Image indicator count */}
+            <div className="mt-4 text-white/60 font-sans text-xs tracking-wider bg-black/30 backdrop-blur-sm px-3.5 py-1.5 rounded-full">
+              {lightboxIndex + 1} de {masonryImages.length}
+            </div>
+          </div>
+
+          {/* Navigation - Next Button */}
+          <button
+            onClick={handleNext}
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/80 hover:text-white bg-black/40 hover:bg-black/60 backdrop-blur-md p-3.5 rounded-full transition-all duration-200 z-50 shadow-lg hover:scale-105"
+            aria-label="Siguiente imagen"
+          >
+            <ChevronRight size={28} />
+          </button>
+        </div>,
+        document.body
       )}
 
       <section className="py-16 w-full border-t border-[var(--color-paramo-bone)]/10 bg-[var(--color-paramo-dark)]">

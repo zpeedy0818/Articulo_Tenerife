@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -59,6 +58,19 @@ export function HeroSection() {
             </Link>
           </div>
         </motion.div>
+      </div>
+
+      {/* Citation */}
+      <div className="absolute bottom-4 right-4 z-30 text-[10px] text-white/30 font-sans tracking-wide select-none">
+        Foto: Colprensa. (s.f.). Imponente el Páramo de Las Hermosas. El País.{" "}
+        <a 
+          href="https://www.elpais.com.co/amp/valle/tenerife-valle-en-el-paramo-de-las-hermosas-la-vida-es-mas-sabrosa.html" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="underline hover:text-white/60 transition-colors"
+        >
+          Fuente
+        </a>
       </div>
     </section>
   );

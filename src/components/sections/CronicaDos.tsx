@@ -57,6 +57,14 @@ export function CronicaDos() {
         >
           <ChevronDown className="text-white w-8 h-8 opacity-70" />
         </motion.div>
+
+        {/* Citation */}
+        <motion.div 
+          style={{ opacity: heroOpacity }}
+          className="absolute bottom-4 right-4 z-30 text-[10px] text-white/30 font-sans tracking-wide select-none"
+        >
+          Foto: De Ruta Por Colombia. (2021, 16 de abril). Laguna Negra, – Tenerife Valle del Cauca, Colombia [Fotografía]. Facebook.
+        </motion.div>
       </section>
 
       {/* Primer Bloque: Asimétrico */}
@@ -114,7 +122,7 @@ export function CronicaDos() {
             transition={{ duration: 1 }}
             className="font-serif text-3xl md:text-5xl italic leading-tight text-[var(--color-paramo-green)]"
           >
-            "El agua que tomamos nace aquí. Si no cuidamos el páramo, no habrá futuro para nadie en el valle."
+            &ldquo;El agua que tomamos nace aquí. Si no cuidamos el páramo, no habrá futuro para nadie en el valle.&rdquo;
           </motion.blockquote>
         </div>
       </section>

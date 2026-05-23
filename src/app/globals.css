@@ -13,6 +13,7 @@
   --color-paramo-bone: #1A2E2A; /* dark text color */
   --color-paramo-yellow: #E58D00;
   --color-paramo-dark: #F7F5F0; /* light cream background */
+  --color-paramo-light:#e1e892;
 
   --color-background: var(--color-paramo-dark);
   --color-foreground: var(--color-paramo-bone);

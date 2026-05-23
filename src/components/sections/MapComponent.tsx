@@ -83,7 +83,7 @@ export default function MapComponent() {
 
         /* Tooltip Custom Styles */
         .leaflet-tooltip.custom-map-tooltip {
-          background: rgba(18, 28, 24, 0.95);
+          background: rgba(64, 99, 85, 0.95);
           backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
           border: 1px solid rgba(31, 87, 64, 0.3);
@@ -108,7 +108,7 @@ export default function MapComponent() {
 
         /* Custom Popup Styles */
         .leaflet-popup-content-wrapper {
-          background: rgba(18, 28, 24, 0.95) !important;
+          background: rgba(252, 246, 214, 0.95) !important;
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
           border: 1px solid rgba(31, 87, 64, 0.2);
@@ -148,8 +148,8 @@ export default function MapComponent() {
               <Popup className="font-sans">
                 <div className="text-[var(--color-paramo-bone)] p-1">
                   <strong className="text-base font-serif text-[var(--color-paramo-green)]">Palmira</strong>
-                  <p className="text-xs text-[var(--color-paramo-fog)] mt-1">Punto de partida y conexión urbana.</p>
-                  <Link href="/zona/palmira" className="inline-block mt-3 px-3 py-1.5 bg-[var(--color-paramo-green)] hover:bg-[var(--color-paramo-moss)] text-white rounded text-xs font-semibold tracking-wide uppercase transition-colors">
+                  <p className="text-xs text-[var(--color-paramo-green)] mt-1">Punto de partida y conexión urbana.</p>
+                  <Link href="/zona/palmira" className="inline-block mt-3 px-3 py-1.5 bg-[var(--color-paramo-light)] hover:bg-[var(--color-paramo-dark)] text-white rounded text-xs font-semibold tracking-wide uppercase transition-colors ">
                     Explorar en 3D →
                   </Link>
                 </div>
@@ -169,8 +169,8 @@ export default function MapComponent() {
               <Popup className="font-sans">
                 <div className="text-[var(--color-paramo-bone)] p-1">
                   <strong className="text-base font-serif text-[var(--color-paramo-green)]">Tenerife</strong>
-                  <p className="text-xs text-[var(--color-paramo-fog)] mt-1">Corregimiento y refugio del páramo.</p>
-                  <Link href="/zona/tenerife" className="inline-block mt-3 px-3 py-1.5 bg-[var(--color-paramo-green)] hover:bg-[var(--color-paramo-moss)] text-white rounded text-xs font-semibold tracking-wide uppercase transition-colors">
+                  <p className="text-xs text-[var(--color-paramo-grenn)] mt-1">Corregimiento y refugio del páramo.</p>
+                  <Link href="/zona/tenerife" className="inline-block mt-3 px-3 py-1.5 bg-[var(--color-paramo-light)] hover:bg-[var(--color-paramo-dark)] text-white rounded text-xs font-semibold tracking-wide uppercase transition-colors text-[var(--color-paramo-dark)]">
                     Explorar en 3D →
                   </Link>
                 </div>
@@ -190,8 +190,8 @@ export default function MapComponent() {
               <Popup className="font-sans">
                 <div className="text-[var(--color-paramo-bone)] p-1">
                   <strong className="text-base font-serif text-[var(--color-paramo-green)]">PNN Las Hermosas</strong>
-                  <p className="text-xs text-[var(--color-paramo-fog)] mt-1">Santuario natural y zona de conservación.</p>
-                  <Link href="/zona/las-hermosas" className="inline-block mt-3 px-3 py-1.5 bg-[var(--color-paramo-green)] hover:bg-[var(--color-paramo-moss)] text-white rounded text-xs font-semibold tracking-wide uppercase transition-colors">
+                  <p className="text-xs text-[var(--color-paramo-green)] mt-1">Santuario natural y zona de conservación.</p>
+                  <Link href="/zona/las-hermosas" className="inline-block mt-3 px-3 py-1.5 bg-[var(--color-paramo-light)] hover:bg-[var(--color-paramo-dark)] text-white rounded text-xs font-semibold tracking-wide uppercase transition-colors">
                     Explorar en 3D →
                   </Link>
                 </div>

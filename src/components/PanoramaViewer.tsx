@@ -153,8 +153,8 @@ export function PanoramaViewer({ imageUrl }: PanoramaViewerProps) {
   }, [imageUrl]);
 
   return (
-    <div className="relative w-full h-full rounded-2xl overflow-hidden bg-black/50 border border-white/10 select-none">
-      <div ref={mountRef} className="w-full h-full" />
+    <div className="relative w-full h-full rounded-2xl overflow-hidden bg-black/50 border border-white/10 select-none touch-none" style={{ touchAction: "none" }}>
+      <div ref={mountRef} className="w-full h-full touch-none" style={{ touchAction: "none" }} />
       {loading && (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-[var(--color-paramo-dark)]/90 text-[var(--color-paramo-bone)] gap-4">
           <div className="w-12 h-12 rounded-full border-4 border-[var(--color-paramo-yellow)] border-t-transparent animate-spin" />

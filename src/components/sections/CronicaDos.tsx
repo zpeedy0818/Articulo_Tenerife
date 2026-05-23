@@ -60,10 +60,10 @@ export function CronicaDos() {
       </section>
 
       {/* Primer Bloque: Asimétrico */}
-      <section className="h-screen w-full relative flex items-center bg-[var(--color-paramo-dark)]">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+      <section className="min-h-screen md:h-screen w-full relative flex items-center bg-[var(--color-paramo-dark)] py-24 md:py-0">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start w-full">
           
-          <div className="md:col-span-5 pt-12 md:pt-32">
+          <div className="md:col-span-5 pt-6 md:pt-32">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -84,13 +84,13 @@ export function CronicaDos() {
             </motion.div>
           </div>
 
-          <div className="md:col-span-7">
+          <div className="md:col-span-7 w-full">
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.5 }}
-              className="relative h-[60vh] md:h-[80vh] w-full rounded-sm overflow-hidden"
+              className="relative h-[30vh] md:h-[80vh] w-full rounded-sm overflow-hidden"
             >
               <img 
                 src="/images/cronica-2/story-1.jpg" 

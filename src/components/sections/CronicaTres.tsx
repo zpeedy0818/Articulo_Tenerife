@@ -75,7 +75,7 @@ export function CronicaTres() {
       </section>
 
       {/* Profile Section */}
-      <section className="h-screen w-full relative flex items-center bg-[var(--color-paramo-dark)] pt-16">
+      <section className="min-h-screen md:h-screen w-full relative flex items-center bg-[var(--color-paramo-dark)] py-24 md:py-0 pt-28 md:pt-16">
         {/* Background Blur */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[var(--color-paramo-green)]/10 blur-[120px] pointer-events-none rounded-full" />
 
@@ -86,7 +86,7 @@ export function CronicaTres() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2 }}
-            className="relative h-[60vh] md:h-[70vh] rounded-sm overflow-hidden shadow-2xl"
+            className="relative h-[40vh] md:h-[70vh] rounded-sm overflow-hidden shadow-2xl w-full"
           >
             <img 
               src="/images/cronica-3/author.jpg" 

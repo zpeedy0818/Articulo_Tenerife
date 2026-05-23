@@ -78,8 +78,8 @@ export function CronicaUno() {
       </section>
 
       {/* Primer Bloque: Texto e Imagen */}
-      <section className="h-screen w-full snap-start relative flex items-center bg-[var(--color-paramo-dark)]">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center h-full py-20">
+      <section className="min-h-screen md:h-screen w-full snap-start relative flex items-center bg-[var(--color-paramo-dark)] py-24 md:py-0">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -91,7 +91,7 @@ export function CronicaUno() {
             </h2>
             <div className="font-sans space-y-6 text-lg text-[var(--color-foreground)] leading-relaxed">
               <p>
-                Tenerife no es solo un corregimiento; es un santuario de alta montaña donde el agua nace entre la niebla. Durante años, este territorio fue testigo de la historia y el conflicto, pero hoy sus habitantes han decidido reescribir su narrativa.
+                Tenerife no es solo un corregimiento; es un santuario de alta montaña donde el agua nace entre la niebla. Durante años, este territory fue testigo de la historia y el conflicto, pero hoy sus habitantes han decidido reescribir su narrativa.
               </p>
               <p>
                 La memoria aquí se entrelaza con las raíces de los frailejones. Conservar el páramo es conservar la paz, asegurando que las futuras generaciones hereden un ecosistema vibrante en lugar de recuerdos de guerra.
@@ -99,7 +99,7 @@ export function CronicaUno() {
             </div>
           </motion.div>
 
-          <div className="order-1 md:order-2 h-[40vh] md:h-[60vh] overflow-hidden rounded-2xl relative shadow-2xl">
+          <div className="order-1 md:order-2 h-[30vh] md:h-[60vh] overflow-hidden rounded-2xl relative shadow-2xl">
             <motion.div style={{ y: imgY }} className="absolute inset-0 scale-110">
               <img 
                 src="/images/cronica-1/author.jpg" 

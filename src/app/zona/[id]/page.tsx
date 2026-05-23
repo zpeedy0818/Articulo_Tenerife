@@ -15,31 +15,31 @@ const zoneData: Record<string, {
   "palmira": {
     name: "Palmira: Conexión Urbana",
     description: "Ubicada en el fértil valle del río Cauca, Palmira es el punto de partida de la travesía hacia Tenerife. Es el motor económico y cultural que se nutre del agua que nace en las cumbres del páramo, evidenciando la interconexión vital entre la ciudad y la alta montaña.",
-    image360: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=3000&auto=format&fit=crop",
+    image360: "/images/zonas/palmira-360.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1541336318489-083c7a050414?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1601099682531-97b7cb756a16?q=80&w=800&auto=format&fit=crop"
+      "/images/zonas/palmira-gallery-1.jpg",
+      "/images/zonas/palmira-gallery-2.jpg",
+      "/images/zonas/palmira-gallery-3.jpg"
     ]
   },
   "tenerife": {
     name: "Tenerife: El Corazón del Páramo",
     description: "El corregimiento de Tenerife es el epicentro de la resistencia y conservación ambiental. Sus tierras altas albergan extensos bosques de niebla y zonas de páramo custodiadas por frailejones eternos. Históricamente golpeado por el conflicto, hoy renace a través del turismo comunitario y el cuidado del agua.",
-    image360: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=3000&auto=format&fit=crop",
+    image360: "/images/zonas/tenerife-360.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1542224566-6e85f2e6772f?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=800&auto=format&fit=crop"
+      "/images/zonas/tenerife-gallery-1.jpg",
+      "/images/zonas/tenerife-gallery-2.jpg",
+      "/images/zonas/tenerife-gallery-3.jpg"
     ]
   },
   "las-hermosas": {
     name: "Parque Nacional Natural Las Hermosas",
     description: "Un ecosistema virgen y sagrado que alberga complejos lagunares de origen glacial, como la Laguna Negra. Es una de las reservas de agua más importantes de Colombia. Las Hermosas representa la inmensidad de la naturaleza y el reto de conservarla para el futuro de la región.",
-    image360: "https://images.unsplash.com/photo-1540103711724-14bec3901b5f?q=80&w=3000&auto=format&fit=crop",
+    image360: "/images/zonas/las-hermosas-360.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1455214532453-0667eee1b1b0?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1533611751147-38e9abccde61?q=80&w=800&auto=format&fit=crop"
+      "/images/zonas/las-hermosas-gallery-1.jpg",
+      "/images/zonas/las-hermosas-gallery-2.jpg",
+      "/images/zonas/las-hermosas-gallery-3.jpg"
     ]
   }
 };

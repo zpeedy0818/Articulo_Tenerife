@@ -24,7 +24,7 @@ export function CronicaDos() {
         >
           <div 
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=2000&auto=format&fit=crop')" }}
+            style={{ backgroundImage: "url('/images/cronica-2/bg.jpg')" }}
           />
           <div className="absolute inset-0 bg-black/45" />
         </motion.div>
@@ -93,7 +93,7 @@ export function CronicaDos() {
               className="relative h-[60vh] md:h-[80vh] w-full rounded-sm overflow-hidden"
             >
               <img 
-                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=2000&auto=format&fit=crop" 
+                src="/images/cronica-2/story-1.jpg" 
                 alt="Parque Nacional Natural Las Hermosas" 
                 className="w-full h-full object-cover"
               />
@@ -141,7 +141,7 @@ export function CronicaDos() {
             ) : (
               <>
                 <img 
-                  src="https://images.unsplash.com/photo-1455214532453-0667eee1b1b0?q=80&w=1500&auto=format&fit=crop" 
+                  src="/images/cronica-2/story-2.jpg" 
                   alt="Laguna Negra" 
                   className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500"
                 />

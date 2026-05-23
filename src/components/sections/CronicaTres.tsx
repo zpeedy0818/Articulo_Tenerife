@@ -8,11 +8,11 @@ import clsx from "clsx";
 
 const masonryImages = [
   "https://images.unsplash.com/photo-1542224566-6e85f2e772f?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1455214532453-0667eee1b1b0?q=80&w=800&auto=format&fit=crop",
+  "/images/cronica-3/masonry-2.jpg",
+  "/images/cronica-3/masonry-3.jpg",
+  "/images/cronica-3/masonry-4.jpg",
+  "/images/cronica-3/masonry-5.jpg",
+  "/images/cronica-3/masonry-6.jpg",
 ];
 
 export function CronicaTres() {
@@ -38,7 +38,7 @@ export function CronicaTres() {
         >
           <div 
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000&auto=format&fit=crop')" }}
+            style={{ backgroundImage: "url('/images/cronica-3/bg.jpg')" }}
           />
           <div className="absolute inset-0 bg-black/45" />
         </motion.div>
@@ -88,7 +88,7 @@ export function CronicaTres() {
             className="relative h-[60vh] md:h-[70vh] rounded-sm overflow-hidden shadow-2xl"
           >
             <img 
-              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1500&auto=format&fit=crop" 
+              src="/images/cronica-3/author.jpg" 
               alt="Alejandro Guerrero" 
               className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
             />

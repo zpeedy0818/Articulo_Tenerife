@@ -7,9 +7,9 @@ import Link from "next/link";
 import clsx from "clsx";
 
 const galleryImages = [
-  { id: 1, url: "https://images.unsplash.com/photo-1542224566-6e85f2e6772f?q=80&w=2000&auto=format&fit=crop", caption: "El páramo, fuente inagotable de agua y vida." },
-  { id: 2, url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop", caption: "Frailejones que custodian las montañas nubladas." },
-  { id: 3, url: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=2000&auto=format&fit=crop", caption: "Senderos que conectan la memoria con la conservación." },
+  { id: 1, url: "/images/cronica-1/slider-1.jpg", caption: "El páramo, fuente inagotable de agua y vida." },
+  { id: 2, url: "/images/cronica-1/slider-2.jpg", caption: "Frailejones que custodian las montañas nubladas." },
+  { id: 3, url: "/images/cronica-1/slider-3.jpg", caption: "Senderos que conectan la memoria con la conservación." },
 ];
 
 export function CronicaUno() {
@@ -42,7 +42,7 @@ export function CronicaUno() {
         >
           <div 
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2000&auto=format&fit=crop')" }}
+            style={{ backgroundImage: "url('/images/cronica-1/bg.jpg')" }}
           />
           <div className="absolute inset-0 bg-black/45" />
         </motion.div>
@@ -102,7 +102,7 @@ export function CronicaUno() {
           <div className="order-1 md:order-2 h-[40vh] md:h-[60vh] overflow-hidden rounded-2xl relative shadow-2xl">
             <motion.div style={{ y: imgY }} className="absolute inset-0 scale-110">
               <img 
-                src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1500&auto=format&fit=crop" 
+                src="/images/cronica-1/author.jpg" 
                 alt="Páramo de Tenerife" 
                 className="w-full h-full object-cover"
               />

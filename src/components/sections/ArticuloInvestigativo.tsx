@@ -95,9 +95,9 @@ export function ArticuloInvestigativo() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { img: "https://images.unsplash.com/photo-1533611751147-38e9abccde61?q=80&w=1000&auto=format&fit=crop", text: "Tiempos de silencio y desplazamiento." },
-            { img: "https://images.unsplash.com/photo-1541336318489-083c7a050414?q=80&w=1000&auto=format&fit=crop", text: "La resiliencia en las miradas." },
-            { img: "https://images.unsplash.com/photo-1601099682531-97b7cb756a16?q=80&w=1000&auto=format&fit=crop", text: "El retorno y la siembra." },
+            { img: "/images/articulo/gallery-1.jpg", text: "Tiempos de silencio y desplazamiento." },
+            { img: "/images/articulo/gallery-2.jpg", text: "La resiliencia en las miradas." },
+            { img: "/images/articulo/gallery-3.jpg", text: "El retorno y la siembra." },
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -133,7 +133,7 @@ export function ArticuloInvestigativo() {
           className="absolute inset-0 z-0"
         >
           <img 
-            src="https://images.unsplash.com/photo-1540103711724-14bec3901b5f?q=80&w=3000&auto=format&fit=crop" 
+            src="/images/articulo/banner.jpg" 
             alt="Cierre panorámico" 
             className="w-full h-full object-cover opacity-30"
           />

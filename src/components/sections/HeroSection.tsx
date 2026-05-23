@@ -16,7 +16,7 @@ export function HeroSection() {
       >
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('/images/hero/bg.jpg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/90" />
       </motion.div>

@@ -16,7 +16,7 @@ export function FogOverlay() {
           repeat: Infinity,
         }}
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2000&auto=format&fit=crop')",
+          backgroundImage: "url('/images/fog/fog-1.jpg')",
           filter: "contrast(1.2) brightness(1.2)"
         }}
         className="absolute -inset-[50%] h-[200%] w-[200%] bg-cover bg-center opacity-70 blur-2xl"
@@ -32,7 +32,7 @@ export function FogOverlay() {
           repeat: Infinity,
         }}
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1491841651911-c44c30c34548?q=80&w=2000&auto=format&fit=crop')",
+          backgroundImage: "url('/images/fog/fog-2.jpg')",
           filter: "contrast(1.2) brightness(1.2)"
         }}
         className="absolute -inset-[50%] h-[200%] w-[200%] bg-cover bg-center opacity-60 blur-xl"

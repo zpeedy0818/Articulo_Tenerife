@@ -18,6 +18,7 @@ const masonryImages = [
 export function CronicaTres() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   
   // Fake Audio Player Animation State
   const waveHeights = Array.from({ length: 40 }).map(() => Math.random() * 100);
@@ -124,8 +125,22 @@ export function CronicaTres() {
                 Escucha su testimonio
               </p>
               <div className="flex items-center gap-6">
+                <audio 
+                  ref={audioRef}
+                  src="/audio/testimonio.mp3" 
+                  onEnded={() => setIsPlaying(false)}
+                />
                 <button 
-                  onClick={() => setIsPlaying(!isPlaying)}
+                  onClick={() => {
+                    if (audioRef.current) {
+                      if (isPlaying) {
+                        audioRef.current.pause();
+                      } else {
+                        audioRef.current.play().catch(e => console.log("Audio failed:", e));
+                      }
+                    }
+                    setIsPlaying(!isPlaying);
+                  }}
                   className="w-14 h-14 rounded-full bg-[var(--color-paramo-green)] text-white flex items-center justify-center hover:scale-105 transition-transform shrink-0"
                 >
                   {isPlaying ? <Pause size={24} /> : <Play size={24} className="ml-1" />}

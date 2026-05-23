@@ -132,12 +132,35 @@ export function CronicaDos() {
             className="relative group rounded-xl overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.8)] border border-white/10 aspect-video bg-black"
           >
             {isPlaying ? (
-              <video 
-                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" 
-                className="w-full h-full object-cover"
-                controls
-                autoPlay
-              />
+              // Automatically handle YouTube links vs Direct/Local Video Files
+              (() => {
+                const videoUrl = "https://www.youtube.com/watch?v=VOMbnx9Tf-s";
+                if (videoUrl.includes("youtube.com") || videoUrl.includes("youtu.be")) {
+                  let videoId = "";
+                  if (videoUrl.includes("watch?v=")) {
+                    videoId = videoUrl.split("watch?v=")[1].split("&")[0];
+                  } else if (videoUrl.includes("youtu.be/")) {
+                    videoId = videoUrl.split("youtu.be/")[1].split("?")[0];
+                  }
+                  return (
+                    <iframe 
+                      src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                      title="Laguna Negra"
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  );
+                }
+                return (
+                  <video 
+                    src={videoUrl} 
+                    className="w-full h-full object-cover"
+                    controls
+                    autoPlay
+                  />
+                );
+              })()
             ) : (
               <>
                 <img 
@@ -154,8 +177,8 @@ export function CronicaDos() {
                   </div>
                 </button>
                 <div className="absolute bottom-6 left-6">
-                  <h3 className="font-serif text-2xl">Laguna Negra</h3>
-                  <p className="font-sans text-sm text-[var(--color-paramo-fog)] uppercase tracking-widest">Documental Breve</p>
+                  <h3 className="font-serif text-2xl text-[var(--color-paramo-dark)]">Laguna Negra</h3>
+                  <p className="font-sans text-sm text-[var(--color-paramo-dark)] uppercase tracking-widest">Documental Breve</p>
                 </div>
               </>
             )}

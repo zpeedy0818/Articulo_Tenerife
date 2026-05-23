@@ -180,7 +180,7 @@ export function CronicaDos() {
               >
                 <div className="flex flex-col items-center">
                   <div className="w-3 h-3 rounded-full bg-[var(--color-paramo-yellow)] shadow-[0_0_10px_rgba(242,201,76,0.8)]" />
-                  {index !== 3 && <div className="w-[1px] h-16 bg-white/20 mt-2" />}
+                  {index !== 3 && <div className="w-[1px] h-16 bg-[var(--color-paramo-green)]/20 mt-2" />}
                 </div>
                 <div className="-mt-1.5">
                   <span className="font-mono text-[var(--color-paramo-moss)] text-sm tracking-wider">{item.year}</span>
@@ -193,26 +193,22 @@ export function CronicaDos() {
       </section>
 
       {/* Botones de Navegación */}
-      <section className="h-[40vh] w-full flex flex-col justify-center border-t border-[var(--color-paramo-bone)]/10 bg-[var(--color-paramo-dark)]">
-        <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto w-full px-4 gap-8">
+      <section className="py-16 w-full border-t border-[var(--color-paramo-bone)]/10 bg-[var(--color-paramo-dark)]">
+        <div className="flex flex-row justify-between items-center max-w-7xl mx-auto w-full px-4">
           <Link 
             href="/cronica/1"
-            className="group flex items-center gap-4 text-[var(--color-paramo-fog)] hover:text-[var(--color-paramo-green)] transition-colors duration-300"
+            className="group flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-paramo-green)]/20 bg-white text-[var(--color-paramo-green)] shadow-sm hover:bg-[var(--color-paramo-green)] hover:text-white hover:border-transparent transition-all duration-300"
           >
-            <div className="p-3 rounded-full border border-[var(--color-paramo-fog)]/20 group-hover:border-[var(--color-paramo-green)] transition-colors">
-              <ArrowLeft className="group-hover:-translate-x-1 transition-transform duration-300" size={20} />
-            </div>
-            <span className="font-sans text-sm uppercase tracking-widest">Crónica 1</span>
+            <ArrowLeft className="group-hover:-translate-x-1 transition-transform" size={18} />
+            <span className="font-sans text-sm uppercase tracking-wider font-semibold">Atrás: Crónica 1</span>
           </Link>
           
           <Link 
             href="/cronica/3"
-            className="group flex items-center gap-4 text-[var(--color-paramo-bone)] hover:text-[var(--color-paramo-green)] transition-colors duration-300"
+            className="group flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-paramo-green)] text-white shadow-md hover:bg-[var(--color-paramo-moss)] hover:shadow-lg transition-all duration-300"
           >
-            <span className="font-serif text-2xl italic">Siguiente: Crónica 3</span>
-            <div className="p-4 rounded-full border border-[var(--color-paramo-bone)]/20 group-hover:border-[var(--color-paramo-green)] transition-colors">
-              <ArrowRight className="group-hover:translate-x-2 transition-transform duration-300" />
-            </div>
+            <span className="font-sans text-sm uppercase tracking-wider font-semibold">Siguiente: Crónica 3</span>
+            <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
           </Link>
         </div>
       </section>

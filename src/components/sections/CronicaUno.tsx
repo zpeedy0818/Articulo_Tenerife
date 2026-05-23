@@ -165,15 +165,13 @@ export function CronicaUno() {
       </section>
 
       {/* Botón Inferior */}
-      <section className="h-[40vh] w-full flex flex-col items-center justify-center bg-[var(--color-paramo-dark)]">
+      <section className="py-16 w-full flex justify-center border-t border-[var(--color-paramo-bone)]/10 bg-[var(--color-paramo-dark)]">
         <Link 
           href="/cronica/2"
-          className="group flex flex-col items-center gap-6 text-[var(--color-foreground)] hover:text-[var(--color-paramo-yellow)] transition-colors duration-300"
+          className="group flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-paramo-green)] text-white shadow-md hover:bg-[var(--color-paramo-moss)] hover:shadow-lg transition-all duration-300"
         >
-          <span className="font-serif text-3xl md:text-4xl italic">Siguiente: Crónica 2</span>
-          <div className="p-6 rounded-full border border-[var(--color-foreground)]/20 group-hover:border-[var(--color-paramo-yellow)] transition-colors">
-            <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform duration-300" />
-          </div>
+          <span className="font-sans text-sm uppercase tracking-wider font-semibold">Siguiente: Crónica 2</span>
+          <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
         </Link>
       </section>
 

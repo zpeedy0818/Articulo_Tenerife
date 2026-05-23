@@ -42,23 +42,22 @@ export function HeroSection() {
           <p className="font-sans text-sm md:text-base text-white/80 max-w-md mx-auto tracking-widest uppercase font-semibold drop-shadow-md">
             Memoria, conservación y paz en las cumbres del Valle del Cauca
           </p>
-        </motion.div>
 
-        {/* Enter Button */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20"
-        >
-          <Link href="/cronica/1" className="group flex flex-col items-center gap-4 cursor-pointer">
-            <span className="text-[12px] uppercase tracking-[0.4em] text-white/90 group-hover:text-white transition-colors">
-              Comenzar Exploración
-            </span>
-            <div className="p-3 rounded-full border border-white/20 group-hover:border-white transition-all bg-black/20 backdrop-blur-sm group-hover:bg-white/10">
-              <ChevronDown className="text-white group-hover:translate-y-1 transition-transform" />
-            </div>
-          </Link>
+          {/* Dual Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+            <Link 
+              href="/cronica/1" 
+              className="px-8 py-3.5 rounded-full bg-[var(--color-paramo-yellow)] hover:bg-white text-black font-sans text-sm uppercase tracking-widest font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-black/20"
+            >
+              Comenzar Crónicas
+            </Link>
+            <Link 
+              href="/mapa" 
+              className="px-8 py-3.5 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/25 hover:bg-white hover:text-black font-sans text-sm uppercase tracking-widest font-bold hover:scale-105 transition-all duration-300 shadow-lg"
+            >
+              Mapa Interactivo
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>

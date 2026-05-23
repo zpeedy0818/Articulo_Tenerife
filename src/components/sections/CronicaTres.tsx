@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowLeft, ArrowRight, Pause, Play, X, ChevronDown } from "lucide-react";
+import { ArrowLeft, ArrowRight, Pause, Play, X, ChevronDown, Map } from "lucide-react";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import clsx from "clsx";
@@ -190,15 +190,22 @@ export function CronicaTres() {
         </div>
       )}
 
-      {/* Botones de Navegación */}
       <section className="py-16 w-full border-t border-[var(--color-paramo-bone)]/10 bg-[var(--color-paramo-dark)]">
-        <div className="flex flex-row justify-between items-center max-w-7xl mx-auto w-full px-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto w-full px-4 gap-4">
           <Link 
             href="/cronica/2"
             className="group flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-paramo-green)]/20 bg-white text-[var(--color-paramo-green)] shadow-sm hover:bg-[var(--color-paramo-green)] hover:text-white hover:border-transparent transition-all duration-300"
           >
             <ArrowLeft className="group-hover:-translate-x-1 transition-transform" size={18} />
             <span className="font-sans text-sm uppercase tracking-wider font-semibold">Atrás: Crónica 2</span>
+          </Link>
+          
+          <Link 
+            href="/mapa"
+            className="group flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-paramo-green)]/25 bg-white text-[var(--color-paramo-green)] shadow-sm hover:bg-[var(--color-paramo-green)] hover:text-white hover:border-transparent transition-all duration-300"
+          >
+            <Map size={18} className="group-hover:scale-110 transition-transform" />
+            <span className="font-sans text-sm uppercase tracking-wider font-semibold">Mapa Interactivo</span>
           </Link>
           
           <Link 

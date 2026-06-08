@@ -4,7 +4,7 @@ import { Navigation } from "@/components/Navigation";
 import { SmoothScroller } from "@/components/SmoothScroller";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { MapPin, Compass } from "lucide-react";
+import { MapPin, Compass, ArrowLeft, ArrowRight } from "lucide-react";
 
 // Dynamically import the map to avoid SSR issues with Leaflet
 const InteractiveMap = dynamic(
@@ -84,6 +84,28 @@ export default function MapaPage() {
           </div>
 
         </div>
+        
+        {/* Footer Navigation */}
+        <section className="mt-16 py-16 w-full border-t border-[var(--color-paramo-bone)]/10">
+          <div className="flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto w-full px-4 gap-4">
+            <Link 
+              href="/cronica/3"
+              className="group flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-paramo-green)]/20 bg-transparent text-[var(--color-paramo-green)] shadow-sm hover:bg-[var(--color-paramo-green)] hover:text-[var(--color-paramo-bone)] hover:border-transparent transition-all duration-300"
+            >
+              <ArrowLeft className="group-hover:-translate-x-1 transition-transform" size={18} />
+              <span className="font-sans text-sm uppercase tracking-wider font-semibold">Atrás: Crónica 3</span>
+            </Link>
+            
+            <Link 
+              href="/articulo"
+              className="group flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-paramo-green)] text-[var(--color-paramo-bone)] shadow-md hover:bg-[var(--color-paramo-moss)] hover:shadow-lg transition-all duration-300"
+            >
+              <span className="font-sans text-sm uppercase tracking-wider font-semibold">Ir al artículo</span>
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+            </Link>
+          </div>
+        </section>
+
       </main>
     </SmoothScroller>
   );

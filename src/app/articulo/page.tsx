@@ -13,6 +13,9 @@ export default function ArticuloInvestigativoPage() {
         <div className="relative w-full h-[55vh] overflow-hidden mb-8 border-b border-[var(--color-paramo-bone)]/10">
           <div className="absolute inset-0 bg-[url('/images/articulo/banner.jpg')] bg-cover bg-center" />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-paramo-dark)] via-[var(--color-paramo-dark)]/20 to-transparent" />
+          <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 z-30 text-[10px] text-white/50 font-sans tracking-wide select-none bg-black/40 px-2 py-1 rounded backdrop-blur-sm">
+            Tascón Caicedo, V. (2026). Paisaje en Tenerife [Fotografía]. Archivo personal.
+          </div>
           
           <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-4xl px-6 text-center space-y-4">
             <span className="font-sans text-[var(--color-paramo-fog)] text-xs uppercase tracking-[0.3em] font-semibold flex items-center justify-center gap-2">
@@ -128,19 +131,25 @@ export default function ArticuloInvestigativoPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
-            <div className="h-64 rounded-xl overflow-hidden shadow-lg border border-[var(--color-paramo-bone)]/10">
+            <div className="h-64 rounded-xl overflow-hidden shadow-lg border border-[var(--color-paramo-bone)]/10 relative">
               <img 
                 src="/images/articulo/gallery-1.jpg" 
                 alt="Frailejones en la niebla" 
                 className="w-full h-full object-cover"
               />
+              <div className="absolute bottom-2 right-2 z-30 text-[9px] text-white/50 font-sans tracking-wide select-none bg-black/50 px-1.5 py-0.5 rounded backdrop-blur-sm">
+                Tascón Caicedo, V. (2026). Paisaje en Tenerife [Fotografía]. Archivo personal.
+              </div>
             </div>
-            <div className="h-64 rounded-xl overflow-hidden shadow-lg border border-[var(--color-paramo-bone)]/10">
+            <div className="h-64 rounded-xl overflow-hidden shadow-lg border border-[var(--color-paramo-bone)]/10 relative">
               <img 
                 src="/images/articulo/gallery-2.jpg" 
                 alt="Agua pura del páramo" 
                 className="w-full h-full object-cover"
               />
+              <div className="absolute bottom-2 right-2 z-30 text-[9px] text-white/50 font-sans tracking-wide select-none bg-black/50 px-1.5 py-0.5 rounded backdrop-blur-sm">
+                Tascón Caicedo, V. (2026). Paisaje en Tenerife [Fotografía]. Archivo personal.
+              </div>
             </div>
           </div>
 
@@ -194,19 +203,18 @@ export default function ArticuloInvestigativoPage() {
         {/* Footer Navigation */}
         <div className="max-w-3xl mx-auto px-6 mt-16 pt-8 border-t border-[var(--color-paramo-bone)]/10 flex flex-col sm:flex-row gap-4 justify-between items-center">
           <Link 
-            href="/cronica/3"
-            className="group flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-paramo-green)]/20 bg-white text-[var(--color-paramo-green)] shadow-sm hover:bg-[var(--color-paramo-green)] hover:text-white hover:border-transparent transition-all duration-300 w-full sm:w-auto justify-center"
+            href="/mapa"
+            className="group flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-paramo-green)]/20 bg-transparent text-[var(--color-paramo-green)] shadow-sm hover:bg-[var(--color-paramo-green)] hover:text-[var(--color-paramo-bone)] hover:border-transparent transition-all duration-300 w-full sm:w-auto justify-center"
           >
             <ArrowLeft className="group-hover:-translate-x-1 transition-transform" size={18} />
-            <span className="font-sans text-sm uppercase tracking-wider font-semibold">Atrás: Crónica 3</span>
+            <span className="font-sans text-sm uppercase tracking-wider font-semibold">Atrás: Mapa</span>
           </Link>
           
           <Link 
-            href="/mapa"
+            href="/collage"
             className="group flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-paramo-green)] text-white shadow-md hover:bg-[var(--color-paramo-moss)] hover:shadow-lg transition-all duration-300 w-full sm:w-auto justify-center"
           >
-            <Map size={18} className="group-hover:scale-110 transition-transform" />
-            <span className="font-sans text-sm uppercase tracking-wider font-semibold">Explorar Mapa e Imágenes 3D</span>
+            <span className="font-sans text-sm uppercase tracking-wider font-semibold">Siguiente: Memoria Visual</span>
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
           </Link>
         </div>

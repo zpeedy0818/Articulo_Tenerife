@@ -115,6 +115,9 @@ export function CronicaUno() {
                 className="w-full h-full object-cover"
               />
             </motion.div>
+            <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 z-30 text-[10px] text-white/50 font-sans tracking-wide select-none bg-black/40 px-2 py-1 rounded backdrop-blur-sm">
+              Tascón Caicedo, V. (2026). Paisaje en Tenerife [Fotografía]. Archivo personal.
+            </div>
           </div>
         </div>
       </section>
@@ -135,11 +138,9 @@ export function CronicaUno() {
                   {img.caption}
                 </p>
               </div>
-              {img.id === 1 && (
-                <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-20 text-[10px] text-white/30 font-sans tracking-wide select-none">
-                  Foto: Tascón Caicedo, V. (2026). Paisaje en Tenerife [Fotografía]. Archivo personal.
-                </div>
-              )}
+              <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-20 text-[10px] text-white/50 font-sans tracking-wide select-none bg-black/40 px-2 py-1 rounded backdrop-blur-sm">
+                Tascón Caicedo, V. (2026). Paisaje en Tenerife [Fotografía]. Archivo personal.
+              </div>
             </div>
           ))}
         </div>

@@ -148,6 +148,9 @@ export function CronicaTres() {
               className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-paramo-dark)]/80 via-transparent to-transparent" />
+            <div className="absolute top-2 right-2 md:top-4 md:right-4 z-30 text-[10px] text-white/50 font-sans tracking-wide select-none bg-black/40 px-2 py-1 rounded backdrop-blur-sm">
+              Tascón Caicedo, V. (2026). Paisaje en Tenerife [Fotografía]. Archivo personal.
+            </div>
             <div className="absolute bottom-8 left-8">
               <h3 className="font-serif text-3xl text-white">Alejandro Guerrero</h3>
               <p className="font-sans text-white/70 text-sm uppercase tracking-widest mt-1">Líder Ambiental</p>
@@ -176,7 +179,7 @@ export function CronicaTres() {
             {/* Audio Player */}
             <div className="bg-[var(--color-paramo-green)]/5 backdrop-blur-md p-6 rounded-2xl border border-[var(--color-paramo-green)]/15 shadow-lg mt-12">
               <p className="font-sans text-sm text-[var(--color-paramo-green)] uppercase tracking-widest mb-4 font-semibold">
-                Escucha su testimonio
+                Charla con Don Alejandro
               </p>
               <div className="flex items-center gap-6">
                 <audio 
@@ -240,6 +243,9 @@ export function CronicaTres() {
                   alt={`Actividad ambiental ${i+1}`} 
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute bottom-2 right-2 z-30 text-[9px] text-white/50 font-sans tracking-wide select-none bg-black/50 px-1.5 py-0.5 rounded backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Tascón Caicedo, V. (2026). Paisaje en Tenerife [Fotografía]. Archivo personal.
+                </div>
               </motion.div>
             ))}
           </div>
@@ -314,17 +320,9 @@ export function CronicaTres() {
           
           <Link 
             href="/mapa"
-            className="group flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-paramo-green)]/25 bg-white text-[var(--color-paramo-green)] shadow-sm hover:bg-[var(--color-paramo-green)] hover:text-white hover:border-transparent transition-all duration-300"
-          >
-            <Map size={18} className="group-hover:scale-110 transition-transform" />
-            <span className="font-sans text-sm uppercase tracking-wider font-semibold">Mapa Interactivo</span>
-          </Link>
-          
-          <Link 
-            href="/articulo"
             className="group flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-paramo-green)] text-white shadow-md hover:bg-[var(--color-paramo-moss)] hover:shadow-lg transition-all duration-300"
           >
-            <span className="font-sans text-sm uppercase tracking-wider font-semibold">Siguiente: Artículo</span>
+            <span className="font-sans text-sm uppercase tracking-wider font-semibold">Siguiente: Mapa Interactivo</span>
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
           </Link>
         </div>

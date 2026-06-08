@@ -106,6 +106,9 @@ export function CronicaDos() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-paramo-dark)]/80 to-transparent" />
+              <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 z-30 text-[10px] text-white/50 font-sans tracking-wide select-none bg-black/40 px-2 py-1 rounded backdrop-blur-sm">
+                Tascón Caicedo, V. (2026). Paisaje en Tenerife [Fotografía]. Archivo personal.
+              </div>
             </motion.div>
           </div>
 
@@ -176,6 +179,9 @@ export function CronicaDos() {
                   alt="Laguna Negra" 
                   className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500"
                 />
+                <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 z-30 text-[10px] text-white/50 font-sans tracking-wide select-none bg-black/40 px-2 py-1 rounded backdrop-blur-sm">
+                  Tascón Caicedo, V. (2026). Paisaje en Tenerife [Fotografía]. Archivo personal.
+                </div>
                 <button 
                   onClick={() => setIsPlaying(true)}
                   className="absolute inset-0 flex items-center justify-center"

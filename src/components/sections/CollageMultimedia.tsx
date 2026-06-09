@@ -10,9 +10,6 @@ const collageMedia = [
   { type: "image", src: "/images/cronica-1/slider-1.jpg" },
   { type: "image", src: "/images/cronica-1/slider-2.jpg" },
   { type: "image", src: "/images/cronica-1/slider-3.jpg" },
-  // Cronica 2
-  { type: "image", src: "/images/cronica-2/story-1.jpg" },
-  { type: "image", src: "/images/cronica-2/story-2.jpg" },
   // Cronica 3
   { type: "image", src: "/images/cronica-3/author.jpg" },
   { type: "image", src: "/images/cronica-3/masonry-1.jpg" },

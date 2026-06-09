@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu as MenuIcon, Compass, BookOpen, Map, Home } from "lucide-react";
+import { Menu as MenuIcon, Compass, BookOpen, Map, Home, Image as ImageIcon, Users } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Menu, MenuItem } from "@/components/ui/fluid-menu";
 
@@ -11,6 +11,8 @@ const navLinks = [
   { href: "/cronica/3", label: "Crónica 3", icon: <BookOpen size={18} /> },
   { href: "/mapa", label: "Mapa Interactivo", icon: <Map size={18} /> },
   { href: "/articulo", label: "Artículo Investigativo", icon: <Compass size={18} /> },
+  { href: "/collage", label: "Collage Multimedia", icon: <ImageIcon size={18} /> },
+  { href: "/autores", label: "Autores", icon: <Users size={18} /> },
 ];
 
 export function Navigation() {

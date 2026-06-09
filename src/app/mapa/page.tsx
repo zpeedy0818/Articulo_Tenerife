@@ -98,9 +98,9 @@ export default function MapaPage() {
             
             <Link 
               href="/articulo"
-              className="group flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-paramo-green)] text-[var(--color-paramo-bone)] shadow-md hover:bg-[var(--color-paramo-moss)] hover:shadow-lg transition-all duration-300"
+              className="group flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-paramo-green)] text-[var(--color-paramo-yellow)] shadow-md hover:bg-[var(--color-paramo-moss)] hover:shadow-lg transition-all duration-300"
             >
-              <span className="font-sans text-sm uppercase tracking-wider font-semibold">Ir al artículo</span>
+              <span className="font-sans text-sm uppercase text-[var(--color-paramo-dark)] tracking-wider font-semibold">Ir al artículo</span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
             </Link>
           </div>

@@ -42,8 +42,14 @@ export function HeroSection() {
             Memoria, conservación y paz en las cumbres del Valle del Cauca
           </p>
 
-          {/* Dual Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center pt-8">
+            <Link 
+              href="/mapa" 
+              className="px-8 py-3.5 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/25 hover:bg-white hover:text-black font-sans text-sm uppercase tracking-widest font-bold hover:scale-105 transition-all duration-300 shadow-lg"
+            >
+              Mapa Interactivo
+            </Link>
             <Link 
               href="/cronica/1" 
               className="px-8 py-3.5 rounded-full bg-[var(--color-paramo-yellow)] hover:bg-white text-black font-sans text-sm uppercase tracking-widest font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-black/20"
@@ -51,10 +57,10 @@ export function HeroSection() {
               Leer Crónicas
             </Link>
             <Link 
-              href="/mapa" 
+              href="/articulo" 
               className="px-8 py-3.5 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/25 hover:bg-white hover:text-black font-sans text-sm uppercase tracking-widest font-bold hover:scale-105 transition-all duration-300 shadow-lg"
             >
-              Mapa Interactivo
+              Ir al Artículo
             </Link>
           </div>
         </motion.div>

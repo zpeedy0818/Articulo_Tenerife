@@ -13,13 +13,13 @@ export default function AutoresPage() {
         <Autores />
 
         {/* Footer Navigation */}
-        <div className="max-w-3xl mx-auto px-6 pb-20 pt-8 flex justify-center items-center bg-[var(--color-paramo-bone)]">
+        <div className="w-full flex justify-center items-center bg-[var(--color-paramo-bone)] py-12 px-6">
           <Link 
             href="/collage"
-            className="group flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-paramo-green)]/20 bg-transparent text-[var(--color-paramo-green)] shadow-sm hover:bg-[var(--color-paramo-green)] hover:text-[var(--color-paramo-bone)] hover:border-transparent transition-all duration-300 w-full sm:w-auto justify-center"
+            className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[var(--color-paramo-dark)] text-[var(--color-paramo-bone)] hover:bg-[var(--color-paramo-green)] hover:text-white transition-all duration-300 shadow-sm w-fit mx-auto justify-center"
           >
-            <ArrowLeft className="group-hover:-translate-x-1 transition-transform" size={18} />
-            <span className="font-sans text-sm uppercase tracking-wider font-semibold">Atrás: Memoria Visual</span>
+            <ArrowLeft className="group-hover:-translate-x-1 transition-transform" size={16} />
+            <span className="font-sans text-xs uppercase tracking-widest font-semibold">Atrás</span>
           </Link>
         </div>
 

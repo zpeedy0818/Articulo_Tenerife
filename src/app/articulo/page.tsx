@@ -157,6 +157,14 @@ export default function ArticuloInvestigativoPage() {
             Cuando en 2017 el programa buscaba un territorio piloto, el Viceministerio de Turismo necesitaba un lugar para experimentar con el proyecto de Turismo y Paz en zonas que antes eran consideradas las más críticas del conflicto (Morales, 2026). Fue entonces cuando la UAO postuló a Tenerife, argumentando que, aunque era un territorio desconocido a nivel nacional, había sido un punto clave del conflicto: sede y base operativa del comandante de las FARC Pablo Catatumbo, cuya movilidad aprovechaba los cañones que conectan Buga, Tuluá y el resto de la región.
           </p>
 
+          <div className="my-12 relative w-full rounded-xl overflow-hidden shadow-lg border border-[var(--color-paramo-bone)]/10 bg-black/20 flex justify-center items-center">
+            <img src="/images/articulo/newimgart.jpeg" alt="Corredor Cordillera Central" className="w-full h-auto max-h-[80vh] object-contain" />
+            <div className="absolute bottom-2 right-2 z-30 text-[9px] text-white/50 font-sans tracking-wide select-none bg-black/50 px-2 py-1 rounded backdrop-blur-sm max-w-[60%] sm:max-w-[40%] text-right leading-tight">
+              Información tomada de la página de la Comisión de la Verdad: “Corredor Cordillera Central y Cañón de Las Hermosas”. Comisión de la Verdad
+            </div>
+          </div>
+
+
           <div className="my-12 p-8 bg-[var(--color-paramo-green)]/5 border-l-4 border-[var(--color-paramo-moss)] rounded-r-xl space-y-4">
             <p className="font-serif text-xl md:text-2xl text-[var(--color-paramo-green)] italic font-medium leading-relaxed">
               "Apenas nos bajamos de las camionetas, todo el mundo cerró puertas, ventanas; nadie salía, nadie nos atendía."

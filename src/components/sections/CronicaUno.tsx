@@ -7,9 +7,10 @@ import Link from "next/link";
 import clsx from "clsx";
 
 const galleryImages = [
-  { id: 1, url: "/images/cronica-1/slider-1.jpg" },
+  { id: 1, url: "/images/cronica-1/slider-1new.jpeg" },
   { id: 2, url: "/images/cronica-1/slider-2.jpg" },
   { id: 3, url: "/images/cronica-1/slider-3.jpg" },
+  { id: 4, url: "/images/cronica-1/slider-4.jpeg" },
 ];
 
 export function CronicaUno() {
@@ -120,21 +121,21 @@ export function CronicaUno() {
           <p className="mb-6 break-inside-avoid">Su padre llegó joven a Tenerife. Empezó trabajando tierras ajenas hasta que, poco a poco, logró tener su propio cultivo. No era hombre de muchas palabras, pero sabía leer la tierra: cuándo una planta necesitaba agua, cuándo una cosecha iba bien, cuándo había que esperar.</p>
           <p className="mb-6 break-inside-avoid">Álvaro creció observando. Primero cargó herramientas, luego ayudó en el deshierbe, después cosechó, y sin darse cuenta había pasado media vida en lo mismo. Nunca pensó en irse.</p>
           <p className="mb-6 break-inside-avoid">Mientras otros soñaban con la ciudad, él imaginaba su vida entre montañas verdes, el aire frío de las madrugadas y la neblina que cubre los cultivos al amanecer.</p>
-          <p className="mb-6 break-inside-avoid italic text-[var(--color-paramo-yellow)]">—Yo siempre me vi aquí —dice mientras muestra una foto de su casa en el celular—. Y aquí sigo.</p>
+          <p className="mb-6 break-inside-avoid italic font-serif text-[var(--color-paramo-yellow)]">—Yo siempre me vi aquí —dice mientras muestra una foto de su casa en el celular—. Y aquí sigo.</p>
           <p className="mb-6 break-inside-avoid">Conoció a Marina en el mismo territorio cuando tenía poco más de veinte años. Se encontraban en el caserío, en la tienda, en reuniones del pueblo o en las jornadas del campo. Con el tiempo se casaron y tuvieron tres hijos, hoy de 12, 15 y 19 años. Juntos construyeron una vida que dependía casi por completo de las cosechas.</p>
           <p className="mb-6 break-inside-avoid">La casa donde viven no apareció de un día para otro. Creció lentamente, como el mismo cultivo que han trabajado toda la vida. Primero se levantaron las paredes; luego, con una buena cosecha, llegó el techo; después las ventanas; y más tarde, el piso. Cada parte de la casa guarda el recuerdo de una temporada que salió bien.</p>
           <p className="mb-6 break-inside-avoid">Marina lo resume siempre de la misma forma:</p>
-          <p className="mb-6 break-inside-avoid italic text-[var(--color-paramo-yellow)]">—Gracias a la cebolla y al trabajo, bendito Dios.</p>
+          <p className="mb-6 break-inside-avoid italic font-serif text-[var(--color-paramo-yellow)]">—Gracias a la cebolla y al trabajo, bendito Dios.</p>
           <p className="mb-6 break-inside-avoid">Porque detrás de cada venta hay meses de esfuerzo. La cebolla ha pagado uniformes, medicamentos, mercados, recibos y mejoras de la casa. Hablar de agricultura, para Álvaro, es hablar de sostener una familia durante generaciones.</p>
         </div>
 
         <div className="max-w-5xl mx-auto px-6 w-full font-sans text-lg md:text-xl text-[var(--color-paramo-bone)]/90 leading-relaxed md:columns-2 md:gap-12">
           <p className="mb-6 break-inside-avoid">Pero el dinero no llega de inmediato. Una cosecha tarda entre cuatro y cinco meses en estar lista. Durante ese tiempo hay que preparar la tierra, comprar semilla, fertilizar, controlar malezas y estar pendiente del clima casi todos los días.</p>
-          <p className="mb-6 break-inside-avoid italic text-[var(--color-paramo-yellow)]">—Esto no es sembrar y esperar —dice—. Aquí toca invertir y estar encima del cultivo.</p>
+          <p className="mb-6 break-inside-avoid italic font-serif text-[var(--color-paramo-yellow)]">—Esto no es sembrar y esperar —dice—. Aquí toca invertir y estar encima del cultivo.</p>
           <p className="mb-6 break-inside-avoid">Una hectárea puede producir entre 20 y 30 toneladas de cebolla en una buena temporada. Pero antes de vender ya se han pagado jornales, insumos, transporte y otros costos acumulados durante meses. Aun así, cuando el precio acompaña, una cosecha sostiene varios meses de gastos familiares.</p>
-          <p className="mb-6 break-inside-avoid italic text-[var(--color-paramo-yellow)]">—Hay cosechas que alcanzan para ponerse al día; otras apenas para recuperar lo invertido —afirma.</p>
+          <p className="mb-6 break-inside-avoid italic font-serif text-[var(--color-paramo-yellow)]">—Hay cosechas que alcanzan para ponerse al día; otras apenas para recuperar lo invertido —afirma.</p>
           <p className="mb-6 break-inside-avoid">En Tenerife, muchas historias se parecen a la suya. La cebolla mueve buena parte de la economía local, genera empleo, sostiene pequeños negocios y permite que muchas familias permanezcan en el territorio.</p>
-          <p className="mb-6 break-inside-avoid italic text-[var(--color-paramo-yellow)]">—Aquí casi todo gira alrededor de ella —dice Álvaro.</p>
+          <p className="mb-6 break-inside-avoid italic font-serif text-[var(--color-paramo-yellow)]">—Aquí casi todo gira alrededor de ella —dice Álvaro.</p>
         </div>
 
         {/* Separator Decorativo */}
@@ -151,23 +152,23 @@ export function CronicaUno() {
           <p className="mb-6 break-inside-avoid">Recuerda especialmente una cosecha en 2015. Había sido un buen año: lluvias oportunas, plantas sanas y producción abundante. Durante días trabajaron desde el amanecer hasta la tarde. Los bultos se acumulaban bajo un techo de zinc mal puesto: cinco, diez, veinte, treinta. Cada uno representaba semanas de trabajo.</p>
           <p className="mb-6 break-inside-avoid">Todo estaba listo para salir hacia Palmira, pero el camión no llegó.</p>
           <p className="mb-6 break-inside-avoid">Esa noche caminó alrededor de la cosecha una y otra vez. Miraba el reloj, hacía cuentas, esperaba. Pero las horas pasaban y la carga seguía inmóvil.</p>
-          <p className="mb-6 break-inside-avoid italic text-[var(--color-paramo-yellow)]">—Eso era lo que más desesperaba —recuerda—. Uno ya había hecho lo más duro.</p>
+          <p className="mb-6 break-inside-avoid italic font-serif text-[var(--color-paramo-yellow)]">—Eso era lo que más desesperaba —recuerda—. Uno ya había hecho lo más duro.</p>
         </div>
 
         <div className="max-w-5xl mx-auto px-6 w-full font-sans text-lg md:text-xl text-[var(--color-paramo-bone)]/90 leading-relaxed md:columns-2 md:gap-12">
           <p className="mb-6 break-inside-avoid">Aquella situación no era aislada. Durante años, Tenerife vivió las dificultades propias de territorios rurales atravesados por el conflicto armado. La vida no siempre se detenía, pero sí se volvía incierta. En algunos momentos hubo desplazamientos forzados y en otros restricciones indirectas: transportadores que evitaban la zona, compradores que no subían y rutas comerciales interrumpidas. Así, vender la producción se convertía en un proceso incierto.</p>
           <p className="mb-6 break-inside-avoid">La economía, sin embargo, resistía.</p>
-          <p className="mb-6 break-inside-avoid italic text-[var(--color-paramo-yellow)]">—Nosotros sabíamos sembrar —dice Álvaro—. El problema era no saber si la cebolla podía salir.</p>
+          <p className="mb-6 break-inside-avoid italic font-serif text-[var(--color-paramo-yellow)]">—Nosotros sabíamos sembrar —dice Álvaro—. El problema era no saber si la cebolla podía salir.</p>
           <p className="mb-6 break-inside-avoid">La frase resume una realidad que marcó a muchas familias: de poco sirve producir si no se puede vender.</p>
           <p className="mb-6 break-inside-avoid">En 2016 se firmó el Acuerdo de Paz. Álvaro no lo recuerda en términos políticos, sino cotidianos: trabajo, movilidad, confianza. No fue un cambio inmediato, pero poco a poco regresaron los compradores, se reactivaron los viajes y el territorio volvió a ser mirado con otros ojos.</p>
           <p className="mb-6 break-inside-avoid">La preocupación dejó de ser si la cosecha saldría. Volvió a ser cómo producir mejor.</p>
-          <p className="mb-6 break-inside-avoid italic text-[var(--color-paramo-yellow)]">—Ahora uno pelea con el clima y con los precios —dice sonriendo.</p>
+          <p className="mb-6 break-inside-avoid italic font-serif text-[var(--color-paramo-yellow)]">—Ahora uno pelea con el clima y con los precios —dice sonriendo.</p>
           <p className="mb-6 break-inside-avoid">Y aunque suena a queja, en realidad marca una diferencia profunda: los problemas volvieron a ser los del campo, no los de la incertidumbre del conflicto.</p>
           <p className="mb-6 break-inside-avoid">La galería central de Palmira sigue llena de movimiento. Un comerciante negocia, otro revisa la calidad de la carga recién llegada. Álvaro observa en silencio, con la tranquilidad de quien ha repetido esta escena durante décadas.</p>
           <p className="mb-6 break-inside-avoid">Cuando habla de la cebolla lo hace con respeto. Sabe que gracias a ella construyó su casa, sostuvo a su familia y educó a sus hijos. Sabe también que detrás de cada bulto hay una historia que casi nunca se ve.</p>
           <p className="mb-6 break-inside-avoid">La de los campesinos que madrugan. La de las montañas que sostienen los cultivos. La de los trabajadores que viven de la cosecha. La de un territorio que aprendió a sostenerse sobre la tierra.</p>
           <p className="mb-6 break-inside-avoid">Antes de despedirse, vuelve a tomar el celular. Busca una foto, la amplía frente a sus ojos. En la pantalla aparecen los cultivos extendidos sobre las montañas verdes de Tenerife. La observa en silencio unos segundos.</p>
-          <p className="mb-6 break-inside-avoid italic text-[var(--color-paramo-yellow)]">—Todo sale de ahí —dice.</p>
+          <p className="mb-6 break-inside-avoid italic font-serif text-[var(--color-paramo-yellow)]">—Todo sale de ahí —dice.</p>
           <p className="mb-6 break-inside-avoid">Y esta vez no habla solo de cebolla. Habla de su padre, de Marina, de sus hijos, de los trabajadores, de las cosechas y de un territorio entero.</p>
           <p className="mb-6 break-inside-avoid">Entonces, resulta difícil no pensar que, en Tenerife, la historia de una cebolla también es la historia del trabajo, la permanencia y la vida que insiste en quedarse.</p>
           <p className="mb-6 break-inside-avoid">Porque durante décadas, aquí se ha seguido haciendo lo mismo: sembrar, cosechar, bajar la cebolla a Palmira y volver a empezar.</p>

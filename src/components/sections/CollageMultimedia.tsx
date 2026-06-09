@@ -19,15 +19,14 @@ const collageMedia = [
   { type: "image", src: "/images/cronica-3/masonry-5.jpg" },
   { type: "image", src: "/images/cronica-3/masonry-6.jpg" },
   { type: "image", src: "/images/cronica-3/masonry-7.jpg" },
-  // Articulo
-  { type: "image", src: "/images/articulo/gallery-1.jpg" },
-  { type: "image", src: "/images/articulo/gallery-2.jpg" },
   // Nuevas Imágenes de Relleno
   ...Array.from({ length: 20 }).map((_, i) => ({ type: "image", src: `/images/new-assets/${i + 1}.jpeg` })),
   // Nuevo Video
   { type: "video", src: "/images/new-assets/Vid1.mp4" },
   { type: "video", src: "/images/new-assets/Vid2.mp4" },
-  { type: "video", src: "/images/new-assets/Vid3.mp4" }
+  { type: "video", src: "/images/new-assets/Vid3.mp4" },
+  { type: "video", src: "/images/new-assets/vid4.mp4" },
+  { type: "video", src: "/images/new-assets/Vid5.mp4" }
 ];
 
 export function CollageMultimedia() {

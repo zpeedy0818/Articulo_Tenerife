@@ -6,9 +6,9 @@ import { Menu, MenuItem } from "@/components/ui/fluid-menu";
 
 const navLinks = [
   { href: "/", label: "Inicio", icon: <Home size={18} /> },
-  { href: "/cronica/1", label: "Crónica 1", icon: <BookOpen size={18} /> },
-  { href: "/cronica/2", label: "Crónica 2", icon: <BookOpen size={18} /> },
-  { href: "/cronica/3", label: "Crónica 3", icon: <BookOpen size={18} /> },
+  { href: "/cronica/1", label: "La Tierra", icon: <BookOpen size={18} /> },
+  { href: "/cronica/2", label: "El Páramo", icon: <BookOpen size={18} /> },
+  { href: "/cronica/3", label: "El Guardián", icon: <BookOpen size={18} /> },
   { href: "/mapa", label: "Mapa Interactivo", icon: <Map size={18} /> },
   { href: "/articulo", label: "Artículo Investigativo", icon: <Compass size={18} /> },
   { href: "/collage", label: "Collage Multimedia", icon: <ImageIcon size={18} /> },

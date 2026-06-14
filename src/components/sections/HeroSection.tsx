@@ -54,7 +54,7 @@ export function HeroSection() {
               href="/cronica/1" 
               className="px-8 py-3.5 rounded-full bg-[var(--color-paramo-yellow)] hover:bg-white text-black font-sans text-sm uppercase tracking-widest font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-black/20"
             >
-              Leer Crónicas
+              Leer Historias
             </Link>
             <Link 
               href="/articulo" 

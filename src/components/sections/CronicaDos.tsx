@@ -39,7 +39,7 @@ export function CronicaDos() {
             transition={{ duration: 0.8 }}
             className="mb-6"
           >
-            <span className="text-[var(--color-paramo-yellow)] font-sans uppercase tracking-[0.3em] text-sm md:text-base font-bold drop-shadow-md">Crónica 2</span>
+            <span className="text-[var(--color-paramo-yellow)] font-sans uppercase tracking-[0.3em] text-sm md:text-base font-bold drop-shadow-md">El Páramo</span>
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
@@ -234,7 +234,7 @@ export function CronicaDos() {
             className="group flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-paramo-green)]/20 bg-white text-[var(--color-paramo-green)] shadow-sm hover:bg-[var(--color-paramo-green)] hover:text-white hover:border-transparent transition-all duration-300"
           >
             <ArrowLeft className="group-hover:-translate-x-1 transition-transform" size={18} />
-            <span className="font-sans text-sm uppercase tracking-wider font-semibold hidden md:inline">Atrás: Crónica 1</span>
+            <span className="font-sans text-sm uppercase tracking-wider font-semibold hidden md:inline">Atrás: La Tierra</span>
             <span className="font-sans text-sm uppercase tracking-wider font-semibold md:hidden">Atrás</span>
           </Link>
           
@@ -242,7 +242,7 @@ export function CronicaDos() {
             href="/cronica/3"
             className="group flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-paramo-green)] text-white shadow-md hover:bg-[var(--color-paramo-moss)] hover:shadow-lg transition-all duration-300"
           >
-            <span className="font-sans text-sm uppercase tracking-wider font-semibold hidden md:inline">Siguiente: Crónica 3</span>
+            <span className="font-sans text-sm uppercase tracking-wider font-semibold hidden md:inline">Siguiente: El Guardián</span>
             <span className="font-sans text-sm uppercase tracking-wider font-semibold md:hidden">Siguiente</span>
             <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
           </Link>
